@@ -1,0 +1,47 @@
+<html>
+<head>
+</head>
+<body>
+
+<script type = "text/javascript">
+
+	function driverfun(){
+		var amount = document.getElementById("amount").value;
+		console.log(amount);
+		let denomination= [{amount:2000},{amount:500},{amount:200},{amount:100}]
+			withdraw(amount,denomination);
+	}
+function withdraw(amount,denomination){
+
+
+let toreturn = []
+	
+	
+denomination.forEach(deno=> {
+	if (deno.amount< amount){
+		quotient = amount/deno.amount;
+		remainder = amount%deno.amount;
+		let selectedOne = {};
+		selectedOne[deno.amount] = quotient;
+		toreturn.push(selectedOne);
+		if(remainder>0){
+			withdraw(remainder,denomination.unshift())
+		}else{
+			return
+		} 
+	}
+
+
+});
+console.log(toreturn)
+}
+
+
+
+	
+</script>
+<input type = "text" id = "amount">
+<button  onclick = "driverfun()"> 
+withdraw  </button>
+</body>
+</html>
