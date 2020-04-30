@@ -1,0 +1,20 @@
+<html>
+<head>
+</head>
+<body>
+
+<script type = "text/javascript">
+function print_time(){
+	var now = new Date();
+	var hours= now.getHours();
+	var mins= now.getMinutes();
+	var seconds= now.getSeconds();
+	
+	document.write("the time is "+hours+ ":"+mins+ ":"+ seconds+"<br/>");
+	
+}
+setInterval("print_time()",1000);
+</script>
+
+</body>
+</html>
