@@ -1,0 +1,30 @@
+<html>
+<head>
+<script type = "text/javascript">
+	function people(name, age){
+		this.name = name;
+		this.age = age;
+		this.yearsUntilRetire= yearsLeft;
+		
+	}
+
+	function yearsLeft(){
+		var numYears = 65 - this.age;
+		return numYears;
+	}
+	
+	var sid = new people("Sidarth",23);
+	var san = new people("sanjeet",20);
+	var shiv = new people("shivangi",21);
+	
+</script>
+</head>
+<body>
+
+<script type = "text/javascript">
+	document.write(sid.yearsUntilRetire());
+	
+</script>
+
+</body>
+</html>

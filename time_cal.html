@@ -1,0 +1,41 @@
+<html>
+<head>
+</head>
+<body>
+
+
+<script type = "text/javascript">
+function current_date(){		
+		
+	var date = new Date();
+    var day = date.getDate();
+    var month = date.getMonth();
+    var year = date.getYear();
+	
+	document.write("current date is "+day+"/"+month+"/"+year+"<br/>");
+}
+
+function  new_date(){
+	var date = new Date();
+    var new_day = date.getDate();
+	var p = document.getElementById("value1").value
+	p = parseInt(p);
+    var new_month = (date.getMonth() + p);
+    var new_year = date.getYear();
+	
+	document.write("the new date is "+new_day+"/"+new_month+"/"+new_year+"<br/>")
+
+}
+
+current_date();
+
+
+</script>
+<input type = "text" id = "value1" name = "frame">
+<form>
+<button onClick = "new_date()"> 
+            click here to know date 
+        </button>
+</form>
+</body>
+</html>
